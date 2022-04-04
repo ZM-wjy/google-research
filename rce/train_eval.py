@@ -61,7 +61,7 @@ def bce_loss(y_true, y_pred, label_smoothing=0):
       label_smoothing=label_smoothing, reduction=tf.keras.losses.Reduction.NONE)
   return loss_fn(y_true[:, None], y_pred[:, None])
 
-
+#####分类器#######
 @gin.configurable
 class ClassifierCriticNetwork(critic_network.CriticNetwork):
   """Creates a critic network."""
